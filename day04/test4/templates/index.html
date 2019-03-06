@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+{% if usernmae %}
+
+<p>
+    用户名:{{ usernmae }}
+</p>
+    <p>
+        <a href="{% url 'app:logout' %}">退出登录</a>
+    </p>
+{% else %}
+    <p>
+        <a href="#">未登录</a>
+    </p>
+{% endif %}
+
+<p>
+    <a href="{% url 'app:register' %}">注册</a>
+</p>
+</body>
+</html>
